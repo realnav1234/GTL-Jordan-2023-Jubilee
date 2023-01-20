@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 from util import bag_of_words, tokenize, stem
 from model import NeuralNet
 
-with open('lesson4/intents2.json', 'r') as f:
+with open('lesson4/intents.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []
@@ -123,7 +123,7 @@ data = {
 "tags": tags
 }
 
-FILE = "lesson4/data2.pth"
+FILE = "lesson4/data3.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')
